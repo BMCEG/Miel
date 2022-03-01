@@ -1,0 +1,102 @@
+.root {
+  margin: auto;
+}
+.root::after {
+  content: '';
+  position: absolute;
+  height: 150vh !important;
+  width: 100vw !important;
+  top: 0;
+  background: url(../assets/Pattern.png);
+  opacity: 0.1;
+  z-index: -1;
+}
+.home_container {
+  margin: auto;
+  width: 90% !important;
+}
+.flip-book {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+
+.page {
+  box-shadow: 0 0 10px black;
+  border: solid 1px hsl(35, 20, 70);
+  overflow: hidden;
+}
+
+.page_img {
+  height: 100%;
+  background-size: contain !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.menu_book {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.page_no {
+  position: absolute;
+  color: #181640;
+  bottom: 0;
+  padding: 1vmin;
+}
+.menu_headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.menu_header_btn {
+  margin: 2vmin !important;
+  min-width: fit-content !important;
+  color: #181640 !important;
+  font-size: large !important;
+  font-weight: bolder !important;
+  padding: 2vmin !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transform: scale(1);
+  transition: all ease-in-out 0.2s !important;
+}
+.menu_header_btn:hover {
+  transform: scale(1.4);
+}
+.menu_title {
+  text-align: center;
+  margin-bottom: 3vmin;
+  padding: 1vmin;
+  background-color: #181640;
+}
+.menu_title_img {
+  width: 30% !important;
+  color: white;
+  mix-blend-mode: multiply;
+}
+.btn_img {
+  width: 50px !important;
+}
+.btn_img_left {
+  transform: rotate(255deg);
+}
+.btn_img_right {
+  transform: rotate(135deg);
+}
+
+.menu_title_text {
+  color: white;
+  /* font-family: ; */
+}
+.nav_title {
+  width: 20% !important;
+  min-width: 200px !important;
+}

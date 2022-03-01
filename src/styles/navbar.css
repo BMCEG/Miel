@@ -1,0 +1,12 @@
+.nav_root {
+  /* background-color: #fdedbe; */
+  padding: 1vmin;
+  min-height: 20vmin;
+  display: flex;
+  z-index: 100;
+  margin-bottom: 5vmin;
+}
+.nav_logo {
+  width: 200px;
+  margin: auto;
+}
