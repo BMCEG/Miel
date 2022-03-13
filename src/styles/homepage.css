@@ -1,22 +1,21 @@
 .root {
   margin: auto;
+  height: 100vh !important;
 }
 .root::after {
   content: '';
   position: absolute;
-  height: 150vh !important;
+  height: 120%;
   width: 100vw !important;
   top: 0;
   background: url(../assets/Pattern.png);
   opacity: 0.1;
   z-index: -1;
 }
-.home_container {
-  margin: auto;
-  width: 90% !important;
-}
+
 .flip-book {
-  width: 100%;
+  display: flex;
+  width: 90% !important;
   transition: all ease-in-out 0.3s;
 }
 
@@ -24,6 +23,7 @@
   box-shadow: 0 0 10px black;
   border: solid 1px hsl(35, 20, 70);
   overflow: hidden;
+  width: fit-content !important;
 }
 
 .page_img {
@@ -46,12 +46,15 @@
   color: #181640;
   bottom: 0;
   padding: 1vmin;
+  display: none;
 }
 .menu_headers {
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow-x: auto;
+  width: 80%;
+  margin: auto;
 }
 
 .menu_header_btn {
@@ -60,7 +63,6 @@
   color: #181640 !important;
   font-size: large !important;
   font-weight: bolder !important;
-  padding: 2vmin !important;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,7 +71,7 @@
   transition: all ease-in-out 0.2s !important;
 }
 .menu_header_btn:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 .menu_title {
   text-align: center;
@@ -94,9 +96,57 @@
 
 .menu_title_text {
   color: white;
-  /* font-family: ; */
 }
 .nav_title {
-  width: 20% !important;
-  min-width: 200px !important;
+  width: 10% !important;
+}
+@media screen and (max-width: 1000px) {
+  .nav_title {
+    width: 30% !important;
+  }
+}
+.footer {
+  width: 80%;
+  margin: auto;
+}
+.footer_side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_container {
+  width: 65% !important;
+  margin: auto !important;
+}
+@media screen and (max-width: 1000px) {
+  .footer_container {
+    width: 80% !important;
+  }
+}
+.footer_text {
+  color: #181640;
+  font-weight: 400 !important;
+}
+.footer_socials {
+  display: flex;
+  width: 80% !important;
+  justify-content: space-evenly;
+}
+.footer_social_btn {
+  width: fit-content !important;
+  aspect-ratio: 1;
+  border-radius: 100% !important;
+}
+.footer_social_btn_icon {
+  color: #181640;
+}
+
+.nav_root {
+  padding: 1vmin;
+  display: flex;
+  z-index: 100;
+}
+.nav_logo {
+  width: 150px;
+  margin: auto;
 }

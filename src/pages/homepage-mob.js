@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Typography, Button, Grid } from '@mui/material';
 import { PageFlip } from 'page-flip';
-import { menuPages, menuHeaders } from '../assets/content.js';
+import { menuPagesMob, menuHeaders } from '../assets/content.js';
 import logo from '../assets/Miel-Logo.png';
 import title from '../assets/Title-w.png';
 import btnElement from '../assets/bg_e2.png';
@@ -13,22 +13,22 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-export default function Homepage() {
-  const menu = menuPages;
+export default function HomepageMob() {
+  const menu = menuPagesMob;
 
   useEffect(() => {
     const pageFlip = new PageFlip(document.getElementById('demoBookExample'), {
-      width: 1250, // base page width
-      height: 733, // base page height
+      width: 335, // base page width
+      height: 480, // base page height
 
       size: 'stretch',
       // set threshold values:
       minWidth: 315,
-      maxWidth: 1550,
+      maxWidth: 350,
       minHeight: 420,
-      maxHeight: 733,
+      maxHeight: 480,
 
-      usePortrait: false,
+      usePortrait: true,
       maxShadowOpacity: 0.5, // Half shadow intensity
       autoSize: true,
       showCover: true,

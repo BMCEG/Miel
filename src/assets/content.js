@@ -21,6 +21,31 @@ import page20 from './Menu/20.png';
 import page21 from './Menu/21.png';
 import page22 from './Menu/22.png';
 
+import page1_mob from './Menu_Mob/1.png';
+import page2_mob from './Menu_Mob/2.png';
+import page3_mob from './Menu_Mob/3.png';
+import page4_mob from './Menu_Mob/4.png';
+import page5_mob from './Menu_Mob/5.png';
+import page6_mob from './Menu_Mob/6.png';
+import page7_mob from './Menu_Mob/7.png';
+import page8_mob from './Menu_Mob/8.png';
+import page9_mob from './Menu_Mob/9.png';
+import page10_mob from './Menu_Mob/10.png';
+import page11_mob from './Menu_Mob/11.png';
+import page12_mob from './Menu_Mob/12.png';
+import page13_mob from './Menu_Mob/13.png';
+import page14_mob from './Menu_Mob/14.png';
+import page15_mob from './Menu_Mob/15.png';
+import page16_mob from './Menu_Mob/16.png';
+import page17_mob from './Menu_Mob/17.png';
+import page18_mob from './Menu_Mob/18.png';
+import page19_mob from './Menu_Mob/19.png';
+import page20_mob from './Menu_Mob/20.png';
+import page21_mob from './Menu_Mob/21.png';
+import page22_mob from './Menu_Mob/22.png';
+
+// import page1 from './Menu_Mob/1.png';
+
 const menuHeaders = [
   'Bakery',
   'Breakfast',
@@ -59,4 +84,29 @@ const menuPages = [
   page22,
 ];
 
-export { menuPages, menuHeaders };
+const menuPagesMob = [
+  page1_mob,
+  page2_mob,
+  page3_mob,
+  page4_mob,
+  page5_mob,
+  page6_mob,
+  page7_mob,
+  page8_mob,
+  page9_mob,
+  page10_mob,
+  page11_mob,
+  page12_mob,
+  page13_mob,
+  page14_mob,
+  page15_mob,
+  page16_mob,
+  page17_mob,
+  page18_mob,
+  page19_mob,
+  page20_mob,
+  page21_mob,
+  page22_mob,
+];
+
+export { menuPages, menuPagesMob, menuHeaders };
