@@ -4,7 +4,17 @@ import { PageFlip } from 'page-flip';
 import { menuPages, menuHeaders } from '../assets/content.js';
 import logo from '../assets/Miel-Logo.png';
 import title from '../assets/Title-w.png';
-import btnElement from '../assets/bg_e2.png';
+import bakeryImg from '../assets/Menu_Pic/bakery.png';
+import breakfastImg from '../assets/Menu_Pic/breakfast.png';
+import coldDrinksImg from '../assets/Menu_Pic/cold-drinks.png';
+import dessertsImg from '../assets/Menu_Pic/desserts.png';
+import extrasImg from '../assets/Menu_Pic/extras.png';
+import hotDrinksImg from '../assets/Menu_Pic/hot-drinks.png';
+import saladImg from '../assets/Menu_Pic/salad.png';
+import sandwichesImg from '../assets/Menu_Pic/sandwiches.png';
+import smoothiesImg from '../assets/Menu_Pic/smoothies.png';
+import softDrinksImg from '../assets/Menu_Pic/soft-drinks.png';
+
 import '../styles/homepage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -15,6 +25,33 @@ import {
 
 export default function Homepage() {
   const menu = menuPages;
+
+  const getElement = (header) => {
+    switch (header) {
+      case 'Bakery':
+        return bakeryImg;
+      case 'Breakfast':
+        return breakfastImg;
+      case 'Sandwiches':
+        return sandwichesImg;
+      case 'Salads':
+        return saladImg;
+      case 'Extras':
+        return extrasImg;
+      case 'Hot Drinks':
+        return hotDrinksImg;
+      case 'Desserts':
+        return dessertsImg;
+      case 'Cold Drinks':
+        return coldDrinksImg;
+      case 'Milkshakes & Smoothies':
+        return smoothiesImg;
+      case 'Soft Drinks':
+        return softDrinksImg;
+      default:
+        return bakeryImg;
+    }
+  };
 
   useEffect(() => {
     const pageFlip = new PageFlip(document.getElementById('demoBookExample'), {
@@ -31,7 +68,7 @@ export default function Homepage() {
       usePortrait: false,
       maxShadowOpacity: 0.5, // Half shadow intensity
       autoSize: true,
-      showCover: true,
+      showCover: false,
       flippingTime: 800,
       mobileScrollSupport: true, // disable content scrolling on mobile devices
     });
@@ -88,13 +125,13 @@ export default function Homepage() {
             <Button key={idx} className={`menu_header_btn btn${idx}`}>
               <img
                 alt="Miel French Bakery"
-                src={btnElement}
+                src={getElement(header)}
                 className="btn_img btn_img_left"
               />
               {header}
               <img
                 alt="Miel French Bakery"
-                src={btnElement}
+                src={getElement(header)}
                 className="btn_img btn_img_right"
               />
             </Button>
@@ -103,7 +140,10 @@ export default function Homepage() {
         <div className="menu_book">
           <div className="flip-book" id="demoBookExample">
             {menu.map((page, index) => (
-              <div className="page" key={index}>
+              <div
+                className={index === 0 ? 'page first_page' : 'page'}
+                key={index}
+              >
                 <img alt="pageAlt" src={page} className="page_img" />
               </div>
             ))}

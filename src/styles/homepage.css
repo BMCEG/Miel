@@ -1,6 +1,9 @@
 .root {
   margin: auto;
   height: 100vh !important;
+  width: 100vw !important;
+  overflow: scroll !important;
+  z-index: 100 !important;
 }
 .root::after {
   content: '';
@@ -25,7 +28,12 @@
   overflow: hidden;
   width: fit-content !important;
 }
-
+.first_page {
+  box-shadow: 0 0 0 !important;
+  border: solid 1px hsl(35, 20, 70);
+  display: none !important;
+  width: fit-content !important;
+}
 .page_img {
   height: 100%;
   background-size: contain !important;
@@ -85,13 +93,14 @@
   mix-blend-mode: multiply;
 }
 .btn_img {
-  width: 50px !important;
+  width: 60px !important;
+  margin: 1vmin;
 }
 .btn_img_left {
-  transform: rotate(255deg);
+  /* transform: rotate(255deg); */
 }
 .btn_img_right {
-  transform: rotate(135deg);
+  /* transform: rotate(135deg); */
 }
 
 .menu_title_text {

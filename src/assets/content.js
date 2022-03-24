@@ -1,3 +1,4 @@
+import page0 from './Menu/0.png';
 import page1 from './Menu/1.png';
 import page2 from './Menu/2.png';
 import page3 from './Menu/3.png';
@@ -60,6 +61,7 @@ const menuHeaders = [
 ];
 
 const menuPages = [
+  page0,
   page1,
   page2,
   page3,
