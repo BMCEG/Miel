@@ -93,14 +93,18 @@
   mix-blend-mode: multiply;
 }
 .btn_img {
-  width: 60px !important;
+  width: 40px !important;
   margin: 1vmin;
 }
 .btn_img_left {
   /* transform: rotate(255deg); */
 }
 .btn_img_right {
-  /* transform: rotate(135deg); */
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .menu_title_text {
